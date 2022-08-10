@@ -38,6 +38,11 @@ go get -u github.com/gorilla/mux
 ## Running the Http Server
 <br>for running the model:
 1. first create a mod init file and select a name for your module
+cd to the project folder 
+```bash
+cd Filtering_Project
+```
+
 ```bash
 go mod init http_server
 ```
