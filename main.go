@@ -143,9 +143,10 @@ func check_intersection(main_data MainData, input_data InputData)string{
 	saved them if they can pass the filter
 */
 func parse_value(main_data MainData, input_data []InputData){
-	Resp_file, err := os.OpenFile(File_name,
-								os.O_APPEND|os.O_CREATE|os.O_WRONLY,
-								0644)
+	Resp_file, err := os.OpenFile(
+		File_name,
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY,
+		0644)
 
 	if err != nil {
 		log.Println("[Info] Failed creating or openning Resp_file: %s", err)
