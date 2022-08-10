@@ -248,9 +248,11 @@ func check_id(id int, invalid_idx []int) bool{
 	and also it checks the feild names
 	including {x, y, width, height}
 */
-func check_request_object_name(Ext_map map[string]interface{}) (string,
-																MainData,
-																[]InputData){
+func check_request_object_name(Ext_map map[string]interface{}) (
+	string,
+	MainData,
+	[]InputData){
+
 	var main_obj MainData
 	var input_obj []InputData
 	status_pass := "failed"
