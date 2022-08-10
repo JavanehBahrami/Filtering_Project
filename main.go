@@ -192,9 +192,10 @@ func parse_value(main_data MainData, input_data []InputData){
 				}
 
 			}else{
-				filtered_box := fmt.Sprintf("%d,%d,%d,%d",
-											input_x, input_y,
-											input_width, input_height)
+				filtered_box := fmt.Sprintf(
+					"%d,%d,%d,%d",
+					input_x, input_y,
+					input_width, input_height)
 				log.Println("[INFO] This input recatangle ["+filtered_box+"] is filtered!")
 			}
 		}else{
