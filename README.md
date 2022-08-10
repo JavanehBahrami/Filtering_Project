@@ -1,9 +1,12 @@
 # Filtering rectangle boxes Project
-In this project we implement a web server (http-server) in order to filtered inputs. These inputs are some retangles with their coordinates. If their coordinates does not have intersection with the coordinates of domain, then they would be filtered. otherwise they will be saved in a `Text` file. 
+In this project we implement a web server (http-server) in order to filtered inputs. These inputs are some retangles with their coordinates. If their coordinates does not have intersection with the coordinates of domain, then they would be filtered. otherwise they will be saved in a `Text` file.
+
+This project is implemented in `golang`.
 
 
 ## Author
 Name: `Saeedeh (Javaneh) Bahrami`
+
 Email: bahramisaeede@gmail.com
 
 
@@ -61,6 +64,7 @@ in the above command, the domain coordinate nameed as `"main"`.
 the rest of coordinates are coordinates of input rectangles named `"input"`
 
 `Note`: we set `localhost` as our endpoint.
+
 `Note`: we set `8080` port. one can change it to another free port.
 
 
