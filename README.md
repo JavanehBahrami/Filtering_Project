@@ -57,6 +57,8 @@ go build
 ./http_server
 ```
 
+`Note`: the http server will log automativally, all event and error handling during each request.
+So user can see the log, after running `./http_server`.
 
 ## Requesting Data Format
 In order to feed request data to the http server, plase use `curl post` as below example:
