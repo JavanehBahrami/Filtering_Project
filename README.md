@@ -54,10 +54,14 @@ go build
 
 
 ## Requesting Data Format
-In order to feed request data to the http server, plase use `curl post` as below:
+In order to feed request data to the http server, plase use `curl post` as below example:
 ```bash
-curl -X POST -s localhost:8080 -d '{"main": {"x": 0, "y": 0, "width": 10, "height": 20}, "input": [{"x": 2, "y": 18, "width": 5, "height":4},{"x": -1, "y": -1, "width": 5, "height": 4}]}'
+curl -X POST -s localhost:8080 -d '{"main": {"x": 3, "y": 2, "width": 5, "height": 10},"input": [{"x": 4, "y": 10, "width": 1, "height": 1},{"x": 9, "y": 10,"width": 5, "height": 4}]}'
+```
 
+
+```bash
+curl -X POST -s localhost:8080 -d '{"main": {"x":0, "y": 0, "width": 10, "height": 20},"input": [{"x":2, "y": 18, "width": 5, "height": 4},{"x":12, "y": 18, "width": 5, "height": 4},{"x":-1, "y": -1, "width": 5, "height": 4}]}'
 ```
 
 in the above command, the domain coordinate nameed as `"main"`.
@@ -68,11 +72,22 @@ the rest of coordinates are coordinates of input rectangles named `"input"`
 `Note`: we set `8080` port. one can change it to another free port.
 
 
+
+
 ## Response Format
-In order to get the response of data from the http server, plase use `curl get` as below:
+In order to get the response of data from the http server, plase use `curl get` as below exmaple:
 
 ```bash
 curl -X GET -s localhost:8080
 ```
 
-`Note`: the output will the list of rectangles which are saved in the `Text file`:
+`Note`: the output will represnet the list of rectangles which are saved in the `Text file`.
+
+output exmaple:
+```bash
+[
+{"x":4,"y":10,"width":1,"height":1,"time":"2022-08-10 19:25:07"},
+{"x":2,"y":18,"width":5,"height":4,"time":"2022-08-10 19:29:00"},
+{"x":-1,"y":-1,"width":5,"height":4,"time":"2022-08-10 19:29:00"},
+]
+```

@@ -125,19 +125,14 @@ func check_intersection(main_data MainData, input_data InputData)string{
 	input_y2 := input_data.Height + input_y1
 
 	if input_x2 > x1 && input_y2 > y1 && input_x2 < x2 && input_y2 < y2{
-		// fmt.Println("condition 1 is met")
 		return "valid"
 	} else if input_x2 > x1 && input_y1 > y1 && input_x2 < x2 && input_y1 < y2{
-		// fmt.Println("condition 2 is met")
 		return "valid"
 	} else if (input_x1 > x1 && input_y1 > y1 && input_x1 < x2 && input_y1 < y2){
-		// fmt.Println("condition 3 is met")
 		return "valid"
 	} else if input_x1 > x1 && input_y2 > y1 && input_x1 < x2 && input_y2 < y2{
-		// fmt.Println("condition 4 is met")
 		return "valid"
 	} else{
-		fmt.Println("condition is not met!!!")
 		return "filtered"
 	}
 }
@@ -148,12 +143,6 @@ func check_intersection(main_data MainData, input_data InputData)string{
 	saved them if they can pass the filter
 */
 func parse_value(main_data MainData, input_data []InputData){
-	// if _, err_file := os.Stat(File_name); err_file != nil {
-	// 	if os.IsNotExist(err_file) {
-	// 		log.Println("[INFO] Can not open File_name, %s", err_file)
-	// 		log.Println("[INFO] Try entering a correct file path and run the web server again!")
-	// 		os.Exit(1)
-	// 	} else {
 	Resp_file, err := os.OpenFile(File_name,
 								os.O_APPEND|os.O_CREATE|os.O_WRONLY,
 								0644)
@@ -311,7 +300,7 @@ func check_request_object_name(Ext_map map[string]interface{}) (string,
 						filtered_arr = append(filtered_arr, elm)
 					}else{
 						log_str4 := "Invalid number of feilds, one or more \"input\" property is lower than 4"
-						log.Println(log_str4)
+						log.Println("[INFO] "+log_str4)
 					}
 				}
 			}
